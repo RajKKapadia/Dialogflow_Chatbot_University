@@ -1,0 +1,14 @@
+sr_no,faculty_name,qualification,experience,is_diploma,is_degree,is_master,is_phd,branch_name
+1,Jyoti Iyer,PhD,22,0,1,1,1,Civil
+2,Hiren Mehta,PhD,24,1,0,0,0,Computer Science
+3,Umang Shah,PhD,23,1,0,0,1,Electrical
+4,Ashvin Prabhaker,PhD,29,0,1,1,1,Electronics & Communication
+5,Bharat Shah,Master,14,0,1,1,0,Information & Technology
+6,Bhaumik Shah,Master,10,1,0,1,0,Mechanical
+7,Shivendra Jha,Master,5,1,0,1,1,Civil
+8,Kalpesh Vaghela,PhD,14,0,1,1,1,Computer Science
+9,Dron Patel,Master,13,1,0,0,0,Electrical
+10,Darshan Thakker,PhD,3,1,0,0,0,Electronics & Communication
+11,Hemang Pandya,PhD,19,1,0,0,1,Information & Technology
+12,Gajendra Rathod,PhD,15,0,1,1,1,Mechanical
+13,Sumit Banker,PhD,16,0,1,1,1,Mechanical

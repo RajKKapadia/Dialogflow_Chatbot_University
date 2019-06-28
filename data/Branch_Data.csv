@@ -1,0 +1,7 @@
+sr_no,branch_name,diploma_seats,degree_seats,master_seats,phd_seats
+1,Civil,60,60,18,0
+2,Computer Science,60,60,18,1
+3,Electrical,60,60,18,2
+4,Electronics & Communication,60,60,18,0
+5,Information & Technology,60,60,18,0
+6,Mechanical,60,60,18,0

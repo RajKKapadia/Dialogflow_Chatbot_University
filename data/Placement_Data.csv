@@ -1,0 +1,13 @@
+sr_no,placed_student,total_student,year,course_name,branch_name
+1,12,60,2018,Diploma,Civil
+2,22,60,2018,Diploma,Computer Science
+3,33,60,2018,Diploma,Electrical
+4,44,60,2018,Diploma,Electronics & Communication
+5,55,60,2018,Diploma,Information & Technology
+6,66,60,2018,Diploma,Mechanical
+7,10,60,2018,Degree,Civil
+8,20,60,2018,Degree,Computer Science
+9,30,60,2018,Degree,Electrical
+10,40,60,2018,Degree,Electronics & Communication
+11,50,60,2018,Degree,Information & Technology
+12,60,60,2018,Degree,Mechanical
