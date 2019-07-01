@@ -46,16 +46,19 @@ def facultyInfo(course, branch):
 
     try:
         faculties = session.query(FacultyMaster).filter(FacultyMaster.branch_name == branch).all()
+        
+        if len(faculties) == 0:
+            outString = "We don't offer {} in {} Engineering.".format(course, branch)
+        else:
+            outString = "We have following faculties in {} {} Engineering Department.  \n".format(course, branch)
 
-        outString = "We have following faculties in {} {} Engineering Department.  \n".format(course, branch)
-
-        for faculty in faculties:
-            outString += faculty.faculty_name
-            outString += " having "
-            outString += faculty.qualification
-            outString += " degree and "
-            outString += str(int.from_bytes(faculty.experience, byteorder=sys.byteorder))
-            outString += " years of experience.  \n"
+            for faculty in faculties:
+                outString += faculty.faculty_name
+                outString += " having "
+                outString += faculty.qualification
+                outString += " degree and "
+                outString += str(int.from_bytes(faculty.experience, byteorder=sys.byteorder))
+                outString += " years of experience.  \n"
 
     except:
         outString = "We don't offer {} in {} Engineering.".format(course, branch)
@@ -67,17 +70,21 @@ def placementInfo(course, branch):
     try:
         placements = session.query(PlacementMaster).filter(PlacementMaster.course_name == course,
                                                         PlacementMaster.branch_name == branch).all()
-        outString = "Placement data for {} {} Engineering is as follows.  \n".format(course, branch)
 
-        for placement in placements:
-            outString += str(int.from_bytes(placement.placed_student, byteorder=sys.byteorder))
-            outString += " out of "
-            outString += str(int.from_bytes(placement.total_student, byteorder=sys.byteorder))
-            outString += " students were placed in different companies during the year "
-            outString += str(int.from_bytes(placement.year, byteorder=sys.byteorder))
-            outString += ".  \n"
+        if len(placements) == 0:
+            outString = "We don't offer {} in {} Engineering.".format(course, branch)
+        else:
+            outString = "Placement data for {} {} Engineering is as follows.  \n".format(course, branch)
+
+            for placement in placements:
+                outString += str(int.from_bytes(placement.placed_student, byteorder=sys.byteorder))
+                outString += " out of "
+                outString += str(int.from_bytes(placement.total_student, byteorder=sys.byteorder))
+                outString += " students were placed in different companies during the year "
+                outString += str(int.from_bytes(placement.year, byteorder=sys.byteorder))
+                outString += ".  \n"
     except:
-        outString = "Something went wrong."
+        outString = "We don't offer {} in {} Engineering.".format(course, branch)
 
     return {'fulfillmentText':outString}
 
@@ -86,7 +93,6 @@ def webhook():
 
     req = flask.request.get_json(force=True)
     intent = req.get('queryResult').get("intent").get('displayName')
-    print(intent)
     course = req.get('queryResult').get("parameters").get('Courses')
     branch = req.get('queryResult').get("parameters").get('Branches')
 
