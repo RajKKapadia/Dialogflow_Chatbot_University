@@ -1,5 +1,8 @@
 # Dialogflow_Chatbot_University
-This is a simple chatbot for university/colleges, it will give information about courses, faculties and placement.
+This is a simple chatbot for university/colleges, it will give information about courses, faculties and placement of that university/college.
+- a course is offered or not and if offered then available seats
+- faculties info of a course and branch, it also give their education and experience
+- placement info of a course and branch, previous years placement
 
 
 ## Pre-requisite :point_right: Python 3.7.3, SQlite, NGROK
